@@ -7,6 +7,7 @@ class Item(db.Model):
   id = db.Column(db.Integer, primary_key=True)
   name = db.Column(db.String(100))
   description = db.Column(db.String(250))
+  properties = db.Column(db.String(250))
   created_at = db.Column(db.DateTime, default=datetime.utcnow)
   # owner = db.relationship('Profile', back_populates='items') # <----- Keeping for now just in case
   profile_id = db.Column(db.Integer, db.ForeignKey('profiles.id'))

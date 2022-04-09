@@ -10,7 +10,6 @@ class Post(db.Model):
   likes = db.Column(db.Integer)
   profile_id = db.Column(db.Integer, db.ForeignKey('profiles.id'))
 
-
   def __init__(self, title, text, likes, user_id):
     self.title = title
     self.text = text

@@ -8,8 +8,9 @@ class Profile(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
     clicks = db.Column(db.Integer)
-    items = db.relationship(Item, secondary='link') #  <---------- not too sure about this
-    posts = db.relationship(Post, secondary='link') #  <---------- not too sure about this
+    # items = db.relationship('Item' , foreign_keys=('db.Model.item_id')) #  <---------- maybe come back to this?
+    items = db.relationship('Item') # 
+    posts = db.relationship('Post') # 
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 

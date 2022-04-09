@@ -8,6 +8,7 @@ from config import Config
 from api.models.user import User
 from api.models.profile import Profile
 from api.models.item import Item
+from api.models.post import Post
 
 # ============ Import Views ============
 from api.views.auth import auth

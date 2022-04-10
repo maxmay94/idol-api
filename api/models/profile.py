@@ -17,3 +17,6 @@ class Profile(db.Model):
     def serialize(self):
       profile = {c.name: getattr(self, c.name) for c in self.__table__.columns}
       return profile
+
+
+# In front end I can set access to update functionallity based on the user._id of the admin account

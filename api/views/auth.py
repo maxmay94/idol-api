@@ -43,6 +43,7 @@ def register():
 # http://127.0.0.1:5000/api/auth/login
 @auth.route('/login', methods=["POST"])
 def login():
+  print(f':::: LOGIN ROUTE HIT ::::')
   data = request.get_json()
   user = User.query.filter_by(email=data['email']).first()
 
